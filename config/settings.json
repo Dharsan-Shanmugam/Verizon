@@ -1,0 +1,41 @@
+{
+  "data_dir": "data/Verizon data",
+  "cache_dir": "cache",
+  "artifacts_dir": "artifacts",
+  "audit_dir": "audit",
+  "server": {"host": "127.0.0.1", "port": 8050},
+  "target_venue": "V01",
+  "live_event_id": "EVT-LIVE-20261028",
+  "today": "2026-10-28",
+  "split": {"train_end_year": 2024},
+  "thresholds": {
+    "ul_prb_pct_gt": 85,
+    "ul_p10_mbps_lt": 3.0,
+    "consecutive_15s_intervals": 3,
+    "radio_headroom_min_pct": 15,
+    "site_backhaul_max_after_move_pct": 85,
+    "aggregation_max_pct": 90,
+    "risk_medium_prb_pct": 70,
+    "risk_high_prb_pct": 85,
+    "alert_probability": 0.5
+  },
+  "steering": {
+    "move_fraction": 0.18,
+    "cell_individual_offset_db": -4,
+    "a3_offset_db": [3, 2],
+    "ul_load_balance_threshold_pct": [85, 71],
+    "auto_revert_minutes": 30,
+    "verify_window_s": 120,
+    "cooldown_s": 600
+  },
+  "models": {
+    "attendance_ridge_alpha": 3.0,
+    "attendance_knn_k": 12,
+    "peak_ridge_alpha": 1.0,
+    "interval_quantiles": [0.05, 0.95],
+    "logistic_iters": 400,
+    "logistic_lr": 0.05,
+    "logistic_l2": 0.0001
+  },
+  "ui": {"max_points_per_series": 800}
+}

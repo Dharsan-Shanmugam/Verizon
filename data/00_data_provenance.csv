@@ -1,0 +1,36 @@
+file,contents,granularity,time_coverage,row_count,column_count,source_type,generator_seed,generated_on
+01_venues.csv,Venue master: target venue (V01) plus 12 similar stadiums,static,—,13,19,synthetic,seed 20261028,2026-10-28
+02_similar_venue_map.csv,"Pairwise venue similarity (capacity, roof, climate) with rank; ≥12 similar venues per venue",static,—,156,7,synthetic,seed 20261028,2026-10-28
+03_venue_zones.csv,Six zones per venue with people capacity and coordinates,static,—,78,7,synthetic,seed 20261028,2026-10-28
+04_cell_inventory.csv,"Cells/sectors per venue: site, sector, band, technology, zone mapping",static,—,103,10,synthetic,seed 20261028,2026-10-28
+05_cell_capacity_history.csv,"UL/DL capacity and PRB count per cell over time (2019, 2021, 2024 upgrades)",change log,2016–2026,412,6,synthetic,seed 20261028,2026-10-28
+06_cell_neighbors.csv,"Neighbor relations with overlap, typical event headroom and steering eligibility",static,—,309,6,synthetic,seed 20261028,2026-10-28
+07_context_weather_daily.csv,Daily weather per venue city,daily,2016-01-01 → 2026-10-28,51402,9,synthetic,seed 20261028,2026-10-28
+08_events_historical.csv,"All past events: football (home vs away watch party), concerts, rallies, other; expected vs actual attendance; COVID cancellations",per event,2016-01-01 → 2026-10-27,4973,27,synthetic,seed 20261028,2026-10-28
+09_events_upcoming_30d.csv,Today's live event plus all scheduled events in the next 30 days,per event,2026-10-28 → 2026-11-27,63,27,synthetic,seed 20261028,2026-10-28
+10_context_event_signals.csv,"Context per event: home/away multiplier, win %, social interest, search trend, transit/road advisories, competing events",per event,2016–2026,5035,18,synthetic,seed 20261028,2026-10-28
+11_similar_events_top12.csv,Top 12 most similar historical events (across similar venues) for every target-venue event since 2022 and all upcoming ones,per event × 12,2022–2026,2016,14,synthetic,seed 20261028,2026-10-28
+12_network_kpi_event_hourly.csv,"Per-cell hourly KPIs for every completed event, 6 h before to 6 h after start",hourly,2016–2026,488098,25,synthetic,seed 20261028,2026-10-28
+13_network_kpi_cell_daily.csv,Per-cell daily baseline KPIs for every day (event and non-event),daily,2016-01-01 → 2026-10-28,407262,13,synthetic,seed 20261028,2026-10-28
+14_network_telemetry_15s_target_venue_12m.csv,"15-second per-cell telemetry for target-venue events in the last 12 months, with congestion flag and 60/120/180-s labels",15 s,2025-10 → 2026-10,380160,30,synthetic,seed 20261028,2026-10-28
+15_live_signals_15s_current_event.csv,"Live 15-second stream for today's in-progress event with forecast, residual and predicted risk",15 s,2026-10-28 10:00 → 13:15,6240,34,synthetic,seed 20261028,2026-10-28
+16_live_model_monitoring_1min.csv,"Live error/drift monitoring per cell: rolling MAE, bias, RMSE, drift score and alert",1 min,2026-10-28,1560,8,synthetic,seed 20261028,2026-10-28
+17_forecasts_vs_actuals_history.csv,"Backtest record: forecast (issued 7 days ahead) vs actual peak PRB, users and attendance by model version",per event × cell,2019–2026,26728,19,synthetic,seed 20261028,2026-10-28
+18_model_monitoring_daily.csv,"Daily rolling MAPE, bias, interval coverage and PSI drift with drift flags (COVID, C-band upgrade)",daily,2019-01-01 → 2026-10-27,2857,10,synthetic,seed 20261028,2026-10-28
+19_forecasts_upcoming_hourly.csv,Hourly per-cell forecasts with intervals and 60/120/180-s risk for upcoming events,hourly,2026-10-28 → 2026-11-27,6422,14,synthetic,seed 20261028,2026-10-28
+20_decisions_log.csv,"Decision audit: recommendation, neighbor target, approval, simulated outcome, verify result, fallback/escalation",per decision,2022–2026,4641,18,synthetic,seed 20261028,2026-10-28
+21_thresholds_policy.csv,"Congestion rule versions (placeholder, not approved)",versioned,—,2,8,synthetic,seed 20261028,2026-10-28
+22_backhaul_links.csv,Backhaul link inventory: one link per cell site plus one aggregation link per venue,static,—,52,9,synthetic,seed 20261103,2026-11-03
+23_backhaul_capacity_history.csv,Backhaul capacity changes (baseline + upgrades),per change,2016–2026,140,4,synthetic,seed 20261103,2026-11-03
+24_backhaul_utilization_event_hourly.csv,"Backhaul load, headroom, latency and loss for every event hour, all venues",hourly (event windows),2016–2026,246272,20,synthetic,seed 20261103,2026-11-03
+25_backhaul_utilization_15s_target_venue.csv,"Backhaul load every 15 s for the target venue, last 12 months + live event",15 seconds,Nov 2025–Oct 2026 + live,193200,18,synthetic,seed 20261103,2026-11-03
+26_steering_safety_checks.csv,"Backhaul-aware check for every steer/fallback decision: radio + transport headroom, verdict, tier",per decision,2022–2026,3504,22,synthetic,seed 20261103,2026-11-03
+27_network_accessibility_drops_event_hourly.csv,"Accessibility, session/VoLTE drop rates and uplink packet loss per cell per event hour",hourly (event windows),2016–2026,488098,16,synthetic,seed 20261103,2026-11-03
+28_temporary_capacity_deployments.csv,"Temporary capacity (COWs, small cells) per event: cost, crew hours, whether needed, and what the PoC would have done",per event,2016–2026,5036,17,synthetic,seed 20261103,2026-11-03
+29_engineer_effort_log.csv,"Engineer minutes per decision: manual process vs PoC review, detection lag vs lead",per decision,2022–2026,4641,16,synthetic,seed 20261103,2026-11-03
+30_unplanned_gatherings.csv,"Crowds not on any schedule (celebrations, marches, protests, parades, evacuations) with warning sources and impact",per gathering,2016–2026,693,16,synthetic,seed 20261103,2026-11-03
+31_unplanned_gathering_telemetry_15s_V01.csv,15-second uplink telemetry for every unplanned gathering at the target venue,15 seconds,2016–2026,361336,10,synthetic,seed 20261103,2026-11-03
+32_traffic_mix_by_app_event_hourly.csv,Uplink and downlink volume split by application group per venue per event hour,hourly x app,2016–2026,492544,11,synthetic,seed 20261103,2026-11-03
+33_device_mix_event.csv,"Device mix per event (5G SA/NSA, LTE, wearables) and uplink-capable features",per event,2016–2026,5036,13,synthetic,seed 20261103,2026-11-03
+34_steering_actions_detail.csv,"Exact network settings changed for each steer/fallback, with revert and change ticket",per action,2022–2026,7460,17,synthetic,seed 20261103,2026-11-03
+35_counterfactual_simulation.csv,"Digital-twin comparison for each decision: no action vs with action on P10, congestion, drops, accessibility",per decision,2022–2026,4641,20,synthetic,seed 20261103,2026-11-03

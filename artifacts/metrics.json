@@ -1,0 +1,358 @@
+{
+ "generated_at": "2026-11-03T10:25:47+00:00",
+ "model_version": "vdi-1.0",
+ "split": "train <= 2024, test 2025-2026",
+ "attendance": {
+  "train": {
+   "n": 3969,
+   "mape_pct": 4.43,
+   "mae_people": 1789.0,
+   "bias_people": -0.0,
+   "interval_coverage": 0.899,
+   "baseline_expected_mape_pct": 4.25
+  },
+  "test": {
+   "n": 767,
+   "mape_pct": 4.07,
+   "mae_people": 2019.0,
+   "bias_people": -36.0,
+   "interval_coverage": 0.887,
+   "baseline_expected_mape_pct": 4.14
+  },
+  "blend_weight_ridge": 1.0,
+  "knn_k": 12,
+  "n_features": 43
+ },
+ "peak_uplink": {
+  "train": {
+   "n": 31452,
+   "mape_pct": 6.99,
+   "mae_prb_pts": 3.23,
+   "bias_prb_pts": -0.34,
+   "interval_coverage": 0.902,
+   "nominal_coverage": 0.9,
+   "hot_cell_recall": 0.668,
+   "hot_cell_precision": 0.867
+  },
+  "test": {
+   "n": 6094,
+   "mape_pct": 7.34,
+   "mae_prb_pts": 4.25,
+   "bias_prb_pts": -1.42,
+   "interval_coverage": 0.883,
+   "nominal_coverage": 0.9,
+   "hot_cell_recall": 0.783,
+   "hot_cell_precision": 0.948
+  },
+  "n_features": 134
+ },
+ "short_horizon": {
+  "train_events": 25,
+  "test_events": 8,
+  "rows_train": 288000,
+  "rows_test": 92160,
+  "test": {
+   "60s": {
+    "auc": 0.9969,
+    "precision": 0.869,
+    "recall": 0.911,
+    "f1": 0.889,
+    "threshold": 0.65,
+    "positive_rate": 0.0589,
+    "auc_not_yet_congested": 0.9916
+   },
+   "120s": {
+    "auc": 0.9962,
+    "precision": 0.881,
+    "recall": 0.881,
+    "f1": 0.881,
+    "threshold": 0.7,
+    "positive_rate": 0.0671,
+    "auc_not_yet_congested": 0.9905
+   },
+   "180s": {
+    "auc": 0.9958,
+    "precision": 0.864,
+    "recall": 0.879,
+    "f1": 0.871,
+    "threshold": 0.675,
+    "positive_rate": 0.0722,
+    "auc_not_yet_congested": 0.99
+   }
+  },
+  "drivers_60s": [
+   {
+    "feature": "prb_roll8",
+    "weight": 0.829
+   },
+   {
+    "feature": "rule_run",
+    "weight": 0.493
+   },
+   {
+    "feature": "log_p50",
+    "weight": 0.475
+   },
+   {
+    "feature": "log_ul_mb",
+    "weight": -0.442
+   },
+   {
+    "feature": "prb_lag8",
+    "weight": 0.314
+   },
+   {
+    "feature": "prb_lag4",
+    "weight": 0.312
+   },
+   {
+    "feature": "prb_lag1",
+    "weight": 0.311
+   },
+   {
+    "feature": "prb",
+    "weight": 0.309
+   }
+  ],
+  "n_features": 44,
+  "excluded_features": [
+   "true_occupancy_sim_only"
+  ]
+ },
+ "monitoring": {
+  "backtest_monthly": [
+   {
+    "month": "2025-01",
+    "n": 124,
+    "mae": 3.782,
+    "bias": 1.34,
+    "mape": 8.5,
+    "coverage": 0.847
+   },
+   {
+    "month": "2025-02",
+    "n": 15,
+    "mae": 2.863,
+    "bias": -0.545,
+    "mape": 4.942,
+    "coverage": 1.0
+   },
+   {
+    "month": "2025-03",
+    "n": 82,
+    "mae": 3.071,
+    "bias": 0.394,
+    "mape": 7.144,
+    "coverage": 0.817
+   },
+   {
+    "month": "2025-04",
+    "n": 170,
+    "mae": 4.588,
+    "bias": -1.539,
+    "mape": 7.78,
+    "coverage": 0.871
+   },
+   {
+    "month": "2025-05",
+    "n": 247,
+    "mae": 3.656,
+    "bias": -0.703,
+    "mape": 6.73,
+    "coverage": 0.927
+   },
+   {
+    "month": "2025-06",
+    "n": 257,
+    "mae": 4.012,
+    "bias": -1.111,
+    "mape": 6.325,
+    "coverage": 0.957
+   },
+   {
+    "month": "2025-07",
+    "n": 253,
+    "mae": 3.686,
+    "bias": -1.071,
+    "mape": 6.04,
+    "coverage": 0.941
+   },
+   {
+    "month": "2025-08",
+    "n": 192,
+    "mae": 4.809,
+    "bias": -2.93,
+    "mape": 6.841,
+    "coverage": 0.943
+   },
+   {
+    "month": "2025-09",
+    "n": 632,
+    "mae": 4.346,
+    "bias": -2.528,
+    "mape": 7.272,
+    "coverage": 0.889
+   },
+   {
+    "month": "2025-10",
+    "n": 585,
+    "mae": 4.014,
+    "bias": -0.548,
+    "mape": 7.731,
+    "coverage": 0.858
+   },
+   {
+    "month": "2025-11",
+    "n": 445,
+    "mae": 4.547,
+    "bias": -0.769,
+    "mape": 8.636,
+    "coverage": 0.813
+   },
+   {
+    "month": "2025-12",
+    "n": 482,
+    "mae": 4.376,
+    "bias": -1.877,
+    "mape": 7.522,
+    "coverage": 0.865
+   },
+   {
+    "month": "2026-01",
+    "n": 123,
+    "mae": 3.909,
+    "bias": 1.376,
+    "mape": 7.99,
+    "coverage": 0.829
+   },
+   {
+    "month": "2026-02",
+    "n": 39,
+    "mae": 3.31,
+    "bias": 0.9,
+    "mape": 6.87,
+    "coverage": 0.949
+   },
+   {
+    "month": "2026-03",
+    "n": 72,
+    "mae": 3.887,
+    "bias": 0.382,
+    "mape": 8.525,
+    "coverage": 0.861
+   },
+   {
+    "month": "2026-04",
+    "n": 187,
+    "mae": 4.107,
+    "bias": -1.624,
+    "mape": 5.895,
+    "coverage": 0.941
+   },
+   {
+    "month": "2026-05",
+    "n": 261,
+    "mae": 4.135,
+    "bias": -1.979,
+    "mape": 6.505,
+    "coverage": 0.92
+   },
+   {
+    "month": "2026-06",
+    "n": 246,
+    "mae": 4.616,
+    "bias": -2.356,
+    "mape": 7.207,
+    "coverage": 0.923
+   },
+   {
+    "month": "2026-07",
+    "n": 223,
+    "mae": 4.55,
+    "bias": -2.45,
+    "mape": 6.41,
+    "coverage": 0.897
+   },
+   {
+    "month": "2026-08",
+    "n": 284,
+    "mae": 4.599,
+    "bias": -3.168,
+    "mape": 6.789,
+    "coverage": 0.93
+   },
+   {
+    "month": "2026-09",
+    "n": 591,
+    "mae": 4.465,
+    "bias": -1.199,
+    "mape": 7.896,
+    "coverage": 0.856
+   },
+   {
+    "month": "2026-10",
+    "n": 584,
+    "mae": 4.255,
+    "bias": -1.413,
+    "mape": 7.697,
+    "coverage": 0.846
+   }
+  ],
+  "drift": [
+   {
+    "feature": "attendance ratio",
+    "psi": 0.2026,
+    "status": "watch"
+   },
+   {
+    "feature": "peak UL PRB",
+    "psi": 0.6034,
+    "status": "alert"
+   },
+   {
+    "feature": "demand-to-capacity load index",
+    "psi": 0.0972,
+    "status": "ok"
+   },
+   {
+    "feature": "non-event baseline UL PRB",
+    "psi": 1.8751,
+    "status": "alert"
+   },
+   {
+    "feature": "cell UL capacity (upgrades)",
+    "psi": 6.0826,
+    "status": "alert"
+   }
+  ]
+ },
+ "timings": {
+  "cache_build_s": {
+   "events": 0.28,
+   "hourly": 3.59,
+   "traffic_mix": 1.38,
+   "backhaul": 1.83,
+   "telemetry": 2.38,
+   "gathering_tel": 0.59,
+   "daily": 1.14,
+   "live": 0.13
+  },
+  "attendance_s": 14.6,
+  "peak_uplink_s": 11.9,
+  "short_horizon_s": 56.0,
+  "total_s": 94.3,
+  "score_s": 14.7
+ },
+ "data": {
+  "events_completed": 4736,
+  "cell_events": 37546,
+  "telemetry_rows": 380160,
+  "data_dir": "Verizon data"
+ },
+ "scoring": {
+  "upcoming_events": 63,
+  "high_risk_events": 27,
+  "live_decisions": 56,
+  "live_alerts": 124
+ }
+}

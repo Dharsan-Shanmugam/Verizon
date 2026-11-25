@@ -1,0 +1,53 @@
+link_id,link_level,venue_id,site_id,uplink_to,medium,redundancy,baseline_latency_ms,data_source
+V01-AGG,aggregation,V01,,V01-AGG-ROUTER,fiber,dual-homed ring,2.8,synthetic
+V01-SITE1-BH,site,V01,V01-SITE1,V01-AGG,fiber,protected,1.8,synthetic
+V01-SITE2-BH,site,V01,V01-SITE2,V01-AGG,fiber,protected,1.2,synthetic
+V01-SITE3-BH,site,V01,V01-SITE3,V01-AGG,microwave,single path,6.9,synthetic
+V02-AGG,aggregation,V02,,V02-AGG-ROUTER,fiber,dual-homed ring,2.9,synthetic
+V02-SITE1-BH,site,V02,V02-SITE1,V02-AGG,fiber,protected,1.2,synthetic
+V02-SITE2-BH,site,V02,V02-SITE2,V02-AGG,fiber,protected,1.5,synthetic
+V02-SITE3-BH,site,V02,V02-SITE3,V02-AGG,fiber,protected,1.0,synthetic
+V03-AGG,aggregation,V03,,V03-AGG-ROUTER,fiber,dual-homed ring,2.4,synthetic
+V03-SITE1-BH,site,V03,V03-SITE1,V03-AGG,fiber,protected,0.8,synthetic
+V03-SITE2-BH,site,V03,V03-SITE2,V03-AGG,fiber,protected,1.1,synthetic
+V03-SITE3-BH,site,V03,V03-SITE3,V03-AGG,fiber,protected,1.4,synthetic
+V04-AGG,aggregation,V04,,V04-AGG-ROUTER,fiber,dual-homed ring,2.2,synthetic
+V04-SITE1-BH,site,V04,V04-SITE1,V04-AGG,fiber,protected,1.4,synthetic
+V04-SITE2-BH,site,V04,V04-SITE2,V04-AGG,fiber,protected,1.7,synthetic
+V04-SITE3-BH,site,V04,V04-SITE3,V04-AGG,microwave,single path,6.0,synthetic
+V05-AGG,aggregation,V05,,V05-AGG-ROUTER,fiber,dual-homed ring,2.2,synthetic
+V05-SITE1-BH,site,V05,V05-SITE1,V05-AGG,fiber,protected,1.3,synthetic
+V05-SITE2-BH,site,V05,V05-SITE2,V05-AGG,fiber,protected,1.0,synthetic
+V05-SITE3-BH,site,V05,V05-SITE3,V05-AGG,fiber,protected,1.8,synthetic
+V06-AGG,aggregation,V06,,V06-AGG-ROUTER,fiber,dual-homed ring,2.1,synthetic
+V06-SITE1-BH,site,V06,V06-SITE1,V06-AGG,fiber,protected,1.6,synthetic
+V06-SITE2-BH,site,V06,V06-SITE2,V06-AGG,fiber,protected,1.8,synthetic
+V06-SITE3-BH,site,V06,V06-SITE3,V06-AGG,fiber,protected,1.0,synthetic
+V07-AGG,aggregation,V07,,V07-AGG-ROUTER,fiber,dual-homed ring,2.8,synthetic
+V07-SITE1-BH,site,V07,V07-SITE1,V07-AGG,fiber,protected,1.6,synthetic
+V07-SITE2-BH,site,V07,V07-SITE2,V07-AGG,fiber,protected,1.5,synthetic
+V07-SITE3-BH,site,V07,V07-SITE3,V07-AGG,fiber,protected,1.9,synthetic
+V08-AGG,aggregation,V08,,V08-AGG-ROUTER,fiber,dual-homed ring,1.5,synthetic
+V08-SITE1-BH,site,V08,V08-SITE1,V08-AGG,fiber,protected,1.0,synthetic
+V08-SITE2-BH,site,V08,V08-SITE2,V08-AGG,fiber,protected,1.8,synthetic
+V08-SITE3-BH,site,V08,V08-SITE3,V08-AGG,fiber,protected,1.9,synthetic
+V09-AGG,aggregation,V09,,V09-AGG-ROUTER,fiber,dual-homed ring,2.6,synthetic
+V09-SITE1-BH,site,V09,V09-SITE1,V09-AGG,fiber,protected,1.4,synthetic
+V09-SITE2-BH,site,V09,V09-SITE2,V09-AGG,fiber,protected,1.9,synthetic
+V09-SITE3-BH,site,V09,V09-SITE3,V09-AGG,microwave,single path,6.7,synthetic
+V10-AGG,aggregation,V10,,V10-AGG-ROUTER,fiber,dual-homed ring,3.0,synthetic
+V10-SITE1-BH,site,V10,V10-SITE1,V10-AGG,fiber,protected,1.5,synthetic
+V10-SITE2-BH,site,V10,V10-SITE2,V10-AGG,fiber,protected,1.1,synthetic
+V10-SITE3-BH,site,V10,V10-SITE3,V10-AGG,fiber,protected,1.4,synthetic
+V11-AGG,aggregation,V11,,V11-AGG-ROUTER,fiber,dual-homed ring,2.2,synthetic
+V11-SITE1-BH,site,V11,V11-SITE1,V11-AGG,fiber,protected,1.9,synthetic
+V11-SITE2-BH,site,V11,V11-SITE2,V11-AGG,fiber,protected,1.2,synthetic
+V11-SITE3-BH,site,V11,V11-SITE3,V11-AGG,fiber,protected,1.9,synthetic
+V12-AGG,aggregation,V12,,V12-AGG-ROUTER,fiber,dual-homed ring,1.7,synthetic
+V12-SITE1-BH,site,V12,V12-SITE1,V12-AGG,fiber,protected,1.4,synthetic
+V12-SITE2-BH,site,V12,V12-SITE2,V12-AGG,fiber,protected,0.9,synthetic
+V12-SITE3-BH,site,V12,V12-SITE3,V12-AGG,microwave,single path,4.3,synthetic
+V13-AGG,aggregation,V13,,V13-AGG-ROUTER,fiber,dual-homed ring,2.8,synthetic
+V13-SITE1-BH,site,V13,V13-SITE1,V13-AGG,fiber,protected,1.3,synthetic
+V13-SITE2-BH,site,V13,V13-SITE2,V13-AGG,fiber,protected,1.8,synthetic
+V13-SITE3-BH,site,V13,V13-SITE3,V13-AGG,fiber,protected,1.0,synthetic

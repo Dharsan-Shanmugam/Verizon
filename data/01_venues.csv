@@ -1,0 +1,14 @@
+venue_id,venue_name,city,state,seating_capacity,roof_type,anchor_team,latitude,longitude,opened_year,is_target_venue,venue_type,concert_capacity,timezone,num_zones,num_cells,parking_spaces,transit_lines_nearby,data_source
+V01,Lakeside Stadium,Chicago,IL,68500,open,Chicago Harbor Hawks,41.862,-87.617,2003,1,stadium,76700,America/Chicago,6,8,17289,3,synthetic
+V02,Riverfront Field,Pittsburgh,PA,68400,open,Pittsburgh Ironmen,40.447,-80.016,2001,0,stadium,76600,America/New_York,6,8,18835,1,synthetic
+V03,Bayview Stadium,Tampa,FL,65900,open,Tampa Bay Marlins FC,27.976,-82.503,1998,0,stadium,73800,America/New_York,6,7,22944,0,synthetic
+V04,Summit Park,Denver,CO,76100,open,Denver Peaks,39.744,-105.02,2001,0,stadium,85200,America/Denver,6,9,19272,3,synthetic
+V05,Harbor Point Stadium,Baltimore,MD,71000,open,Baltimore Gulls,39.278,-76.623,1998,0,stadium,79500,America/New_York,6,8,23717,4,synthetic
+V06,Gateway Dome,Indianapolis,IN,67000,retractable,Indy Racers,39.76,-86.164,2008,0,stadium,75000,America/Indiana/Indianapolis,6,8,17374,0,synthetic
+V07,Prairie Field,Kansas City,MO,76400,open,KC Plainsmen,39.049,-94.484,1972,0,stadium,85600,America/Chicago,6,9,26879,1,synthetic
+V08,Northshore Stadium,Seattle,WA,68700,partial,Seattle Orcas,47.595,-122.332,2002,0,stadium,76900,America/Los_Angeles,6,8,23670,4,synthetic
+V09,Canyon Stadium,Phoenix,AZ,63400,retractable,Phoenix Firebirds,33.528,-112.263,2006,0,stadium,71000,America/Phoenix,6,7,17586,1,synthetic
+V10,Liberty Field,Philadelphia,PA,69800,open,Philly Founders,39.901,-75.168,2003,0,stadium,78200,America/New_York,6,8,19525,4,synthetic
+V11,Twin Lakes Stadium,Minneapolis,MN,66600,fixed,Minnesota Frost,44.974,-93.258,2016,0,stadium,74600,America/Chicago,6,8,22243,0,synthetic
+V12,Midtown Stadium,Nashville,TN,69100,open,Nashville Rhythm,36.166,-86.771,1999,0,stadium,77400,America/Chicago,6,8,25719,1,synthetic
+V13,Old Mill Stadium,Cincinnati,OH,65500,open,Cincy Millers,39.095,-84.516,2000,0,stadium,73400,America/New_York,6,7,21954,3,synthetic

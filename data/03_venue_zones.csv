@@ -1,0 +1,79 @@
+zone_id,venue_id,zone_name,zone_capacity_people,zone_lat,zone_lon,zone_type
+V01-Z1,V01,North Stand,13700,41.86178,-87.61674,seating
+V01-Z2,V01,South Stand,13700,41.86353,-87.61633,seating
+V01-Z3,V01,East Stand,11645,41.86301,-87.61801,seating
+V01-Z4,V01,West Stand,11645,41.86103,-87.61682,seating
+V01-Z5,V01,Main Concourse,8220,41.86257,-87.61603,indoor
+V01-Z6,V01,Plaza & Fan Zone,17125,41.86331,-87.61786,outdoor
+V02-Z1,V02,North Stand,13680,40.44659,-80.01637,seating
+V02-Z2,V02,South Stand,13680,40.44632,-80.01607,seating
+V02-Z3,V02,East Stand,11628,40.4468,-80.01521,seating
+V02-Z4,V02,West Stand,11628,40.44741,-80.01632,seating
+V02-Z5,V02,Main Concourse,8208,40.44713,-80.0152,indoor
+V02-Z6,V02,Plaza & Fan Zone,17100,40.44693,-80.01527,outdoor
+V03-Z1,V03,North Stand,13180,27.97678,-82.50317,seating
+V03-Z2,V03,South Stand,13180,27.97592,-82.50379,seating
+V03-Z3,V03,East Stand,11203,27.97567,-82.50271,seating
+V03-Z4,V03,West Stand,11203,27.97642,-82.50443,seating
+V03-Z5,V03,Main Concourse,7908,27.9782,-82.50219,indoor
+V03-Z6,V03,Plaza & Fan Zone,16475,27.97539,-82.50227,outdoor
+V04-Z1,V04,North Stand,15220,39.74429,-105.02081,seating
+V04-Z2,V04,South Stand,15220,39.74441,-105.0202,seating
+V04-Z3,V04,East Stand,12937,39.74399,-105.02091,seating
+V04-Z4,V04,West Stand,12937,39.74429,-105.01966,seating
+V04-Z5,V04,Main Concourse,9132,39.74375,-105.01865,indoor
+V04-Z6,V04,Plaza & Fan Zone,19025,39.7437,-105.01976,outdoor
+V05-Z1,V05,North Stand,14200,39.27806,-76.62232,seating
+V05-Z2,V05,South Stand,14200,39.27772,-76.62282,seating
+V05-Z3,V05,East Stand,12070,39.27806,-76.62238,seating
+V05-Z4,V05,West Stand,12070,39.27729,-76.62224,seating
+V05-Z5,V05,Main Concourse,8520,39.28045,-76.62294,indoor
+V05-Z6,V05,Plaza & Fan Zone,17750,39.27705,-76.62313,outdoor
+V06-Z1,V06,North Stand,13400,39.76256,-86.16359,seating
+V06-Z2,V06,South Stand,13400,39.7599,-86.16139,seating
+V06-Z3,V06,East Stand,11390,39.7596,-86.1646,seating
+V06-Z4,V06,West Stand,11390,39.75953,-86.16412,seating
+V06-Z5,V06,Main Concourse,8040,39.76065,-86.16476,indoor
+V06-Z6,V06,Plaza & Fan Zone,16750,39.75867,-86.16381,outdoor
+V07-Z1,V07,North Stand,15280,39.0485,-94.48345,seating
+V07-Z2,V07,South Stand,15280,39.05179,-94.48313,seating
+V07-Z3,V07,East Stand,12988,39.04856,-94.4837,seating
+V07-Z4,V07,West Stand,12988,39.04959,-94.48447,seating
+V07-Z5,V07,Main Concourse,9168,39.04998,-94.48379,indoor
+V07-Z6,V07,Plaza & Fan Zone,19100,39.05011,-94.4832,outdoor
+V08-Z1,V08,North Stand,13740,47.59322,-122.33158,seating
+V08-Z2,V08,South Stand,13740,47.59436,-122.33233,seating
+V08-Z3,V08,East Stand,11679,47.59434,-122.33176,seating
+V08-Z4,V08,West Stand,11679,47.59443,-122.33178,seating
+V08-Z5,V08,Main Concourse,8244,47.59432,-122.33383,indoor
+V08-Z6,V08,Plaza & Fan Zone,17175,47.59449,-122.33183,outdoor
+V09-Z1,V09,North Stand,12680,33.52835,-112.26316,seating
+V09-Z2,V09,South Stand,12680,33.52713,-112.26344,seating
+V09-Z3,V09,East Stand,10778,33.52763,-112.26213,seating
+V09-Z4,V09,West Stand,10778,33.52816,-112.26344,seating
+V09-Z5,V09,Main Concourse,7608,33.52885,-112.26309,indoor
+V09-Z6,V09,Plaza & Fan Zone,15850,33.52796,-112.26427,outdoor
+V10-Z1,V10,North Stand,13960,39.90099,-75.1669,seating
+V10-Z2,V10,South Stand,13960,39.90126,-75.16766,seating
+V10-Z3,V10,East Stand,11866,39.90039,-75.16797,seating
+V10-Z4,V10,West Stand,11866,39.89973,-75.16769,seating
+V10-Z5,V10,Main Concourse,8376,39.9007,-75.16761,indoor
+V10-Z6,V10,Plaza & Fan Zone,17450,39.89967,-75.16649,outdoor
+V11-Z1,V11,North Stand,13320,44.97488,-93.2567,seating
+V11-Z2,V11,South Stand,13320,44.97482,-93.25719,seating
+V11-Z3,V11,East Stand,11322,44.97566,-93.25759,seating
+V11-Z4,V11,West Stand,11322,44.97512,-93.25842,seating
+V11-Z5,V11,Main Concourse,7992,44.97387,-93.25868,indoor
+V11-Z6,V11,Plaza & Fan Zone,16650,44.97348,-93.25751,outdoor
+V12-Z1,V12,North Stand,13820,36.16733,-86.77043,seating
+V12-Z2,V12,South Stand,13820,36.1668,-86.77075,seating
+V12-Z3,V12,East Stand,11747,36.16593,-86.77043,seating
+V12-Z4,V12,West Stand,11747,36.16483,-86.77181,seating
+V12-Z5,V12,Main Concourse,8292,36.16502,-86.77025,indoor
+V12-Z6,V12,Plaza & Fan Zone,17275,36.16668,-86.76921,outdoor
+V13-Z1,V13,North Stand,13100,39.095,-84.51611,seating
+V13-Z2,V13,South Stand,13100,39.09396,-84.51616,seating
+V13-Z3,V13,East Stand,11135,39.09588,-84.51563,seating
+V13-Z4,V13,West Stand,11135,39.09546,-84.51528,seating
+V13-Z5,V13,Main Concourse,7860,39.09485,-84.5163,indoor
+V13-Z6,V13,Plaza & Fan Zone,16375,39.09564,-84.51601,outdoor

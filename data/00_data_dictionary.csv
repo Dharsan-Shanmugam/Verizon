@@ -1,0 +1,539 @@
+file,column,data_type,description
+01_venues.csv,venue_id,str,Venue identifier (V01 = target venue)
+01_venues.csv,venue_name,str,Venue name
+01_venues.csv,city,str,City
+01_venues.csv,state,str,State
+01_venues.csv,seating_capacity,int64,Seating capacity
+01_venues.csv,roof_type,str,Roof type
+01_venues.csv,anchor_team,str,Anchor team
+01_venues.csv,latitude,float64,Latitude
+01_venues.csv,longitude,float64,Longitude
+01_venues.csv,opened_year,int64,Opened year
+01_venues.csv,is_target_venue,int64,Is target venue
+01_venues.csv,venue_type,str,Venue type
+01_venues.csv,concert_capacity,int64,Concert capacity
+01_venues.csv,timezone,str,Timezone
+01_venues.csv,num_zones,int64,Num zones
+01_venues.csv,num_cells,int64,Num cells
+01_venues.csv,parking_spaces,int64,Parking spaces
+01_venues.csv,transit_lines_nearby,int64,Transit lines nearby
+01_venues.csv,data_source,str,Always 'synthetic'
+02_similar_venue_map.csv,venue_id,str,Venue identifier (V01 = target venue)
+02_similar_venue_map.csv,similar_venue_id,str,Similar venue id
+02_similar_venue_map.csv,capacity_similarity,float64,Capacity similarity
+02_similar_venue_map.csv,roof_similarity,float64,Roof similarity
+02_similar_venue_map.csv,climate_similarity,float64,Climate similarity
+02_similar_venue_map.csv,overall_similarity,float64,Overall similarity
+02_similar_venue_map.csv,rank,int64,Rank
+03_venue_zones.csv,zone_id,str,Venue zone identifier
+03_venue_zones.csv,venue_id,str,Venue identifier (V01 = target venue)
+03_venue_zones.csv,zone_name,str,Zone name
+03_venue_zones.csv,zone_capacity_people,int64,Zone capacity people
+03_venue_zones.csv,zone_lat,float64,Zone lat
+03_venue_zones.csv,zone_lon,float64,Zone lon
+03_venue_zones.csv,zone_type,str,Zone type
+04_cell_inventory.csv,cell_id,str,Cell/sector identifier
+04_cell_inventory.csv,venue_id,str,Venue identifier (V01 = target venue)
+04_cell_inventory.csv,zone_id,str,Venue zone identifier
+04_cell_inventory.csv,site_id,str,Site id
+04_cell_inventory.csv,sector,str,Sector
+04_cell_inventory.csv,band,str,Band
+04_cell_inventory.csv,technology,str,Technology
+04_cell_inventory.csv,azimuth_deg,int64,Azimuth deg
+04_cell_inventory.csv,antenna_tilt_deg,int64,Antenna tilt deg
+04_cell_inventory.csv,data_source,str,Always 'synthetic'
+05_cell_capacity_history.csv,cell_id,str,Cell/sector identifier
+05_cell_capacity_history.csv,effective_from,str,Effective from
+05_cell_capacity_history.csv,ul_capacity_mbps,float64,Ul capacity mbps
+05_cell_capacity_history.csv,dl_capacity_mbps,float64,Dl capacity mbps
+05_cell_capacity_history.csv,prb_count,int64,Prb count
+05_cell_capacity_history.csv,change_reason,str,Change reason
+06_cell_neighbors.csv,cell_id,str,Cell/sector identifier
+06_cell_neighbors.csv,neighbor_cell_id,str,Neighbor cell id
+06_cell_neighbors.csv,overlap_score,float64,Overlap score
+06_cell_neighbors.csv,typical_event_headroom_pct,float64,Typical event headroom pct
+06_cell_neighbors.csv,distance_m,int64,Distance m
+06_cell_neighbors.csv,steering_eligibility,str,Steering eligibility
+07_context_weather_daily.csv,date,str,Date
+07_context_weather_daily.csv,venue_id,str,Venue identifier (V01 = target venue)
+07_context_weather_daily.csv,city,str,City
+07_context_weather_daily.csv,temp_max_f,float64,Temp max f
+07_context_weather_daily.csv,temp_min_f,float64,Temp min f
+07_context_weather_daily.csv,precip_in,float64,Precip in
+07_context_weather_daily.csv,wind_mph,float64,Wind mph
+07_context_weather_daily.csv,condition,str,Condition
+07_context_weather_daily.csv,severe_weather_alert,bool,Severe weather alert
+08_events_historical.csv,event_id,str,Event identifier (EVT-######)
+08_events_historical.csv,venue_id,str,Venue identifier (V01 = target venue)
+08_events_historical.csv,event_name,str,Event name
+08_events_historical.csv,event_category,str,Event category
+08_events_historical.csv,event_subtype,str,Event subtype
+08_events_historical.csv,anchor_team_home_away,str,home = venue's team plays at home (full crowd); away = team plays elsewhere and venue hosts a watch party/fan fest (much smaller crowd); neutral = non-football
+08_events_historical.csv,opponent_or_performer,str,Opponent or performer
+08_events_historical.csv,season_year,int64,Season year
+08_events_historical.csv,event_start,str,Event start
+08_events_historical.csv,duration_hours,float64,Duration hours
+08_events_historical.csv,event_status,str,completed / cancelled / postponed / scheduled / in_progress
+08_events_historical.csv,capacity_limit_pct,float64,Capacity cap in force (COVID 2020–21)
+08_events_historical.csv,expected_attendance,int64,Pre-event attendance estimate (people)
+08_events_historical.csv,attendance_estimate_low,int64,Attendance estimate low
+08_events_historical.csv,attendance_estimate_high,int64,Attendance estimate high
+08_events_historical.csv,actual_attendance,float64,Measured attendance (people); blank if not completed
+08_events_historical.csv,estimate_source,str,Where the estimate came from
+08_events_historical.csv,estimate_confidence,float64,Confidence in estimate (0–1)
+08_events_historical.csv,ticket_sell_through_pct,float64,Ticket sell through pct
+08_events_historical.csv,avg_ticket_price_usd,float64,Avg ticket price usd
+08_events_historical.csv,rivalry_flag,bool,Rivalry flag
+08_events_historical.csv,holiday_flag,bool,Holiday flag
+08_events_historical.csv,primetime_flag,bool,Primetime flag
+08_events_historical.csv,weather_temp_f,float64,Weather temp f
+08_events_historical.csv,weather_condition,str,Weather condition
+08_events_historical.csv,weather_precip_in,float64,Weather precip in
+08_events_historical.csv,data_source,str,Always 'synthetic'
+09_events_upcoming_30d.csv,event_id,str,Event identifier (EVT-######)
+09_events_upcoming_30d.csv,venue_id,str,Venue identifier (V01 = target venue)
+09_events_upcoming_30d.csv,event_name,str,Event name
+09_events_upcoming_30d.csv,event_category,str,Event category
+09_events_upcoming_30d.csv,event_subtype,str,Event subtype
+09_events_upcoming_30d.csv,anchor_team_home_away,str,home = venue's team plays at home (full crowd); away = team plays elsewhere and venue hosts a watch party/fan fest (much smaller crowd); neutral = non-football
+09_events_upcoming_30d.csv,opponent_or_performer,str,Opponent or performer
+09_events_upcoming_30d.csv,season_year,int64,Season year
+09_events_upcoming_30d.csv,event_start,str,Event start
+09_events_upcoming_30d.csv,duration_hours,float64,Duration hours
+09_events_upcoming_30d.csv,event_status,str,completed / cancelled / postponed / scheduled / in_progress
+09_events_upcoming_30d.csv,capacity_limit_pct,float64,Capacity cap in force (COVID 2020–21)
+09_events_upcoming_30d.csv,expected_attendance,int64,Pre-event attendance estimate (people)
+09_events_upcoming_30d.csv,attendance_estimate_low,int64,Attendance estimate low
+09_events_upcoming_30d.csv,attendance_estimate_high,int64,Attendance estimate high
+09_events_upcoming_30d.csv,actual_attendance,float64,Measured attendance (people); blank if not completed
+09_events_upcoming_30d.csv,estimate_source,str,Where the estimate came from
+09_events_upcoming_30d.csv,estimate_confidence,float64,Confidence in estimate (0–1)
+09_events_upcoming_30d.csv,ticket_sell_through_pct,float64,Ticket sell through pct
+09_events_upcoming_30d.csv,avg_ticket_price_usd,float64,Avg ticket price usd
+09_events_upcoming_30d.csv,rivalry_flag,bool,Rivalry flag
+09_events_upcoming_30d.csv,holiday_flag,bool,Holiday flag
+09_events_upcoming_30d.csv,primetime_flag,bool,Primetime flag
+09_events_upcoming_30d.csv,weather_temp_f,float64,Weather temp f
+09_events_upcoming_30d.csv,weather_condition,str,Weather condition
+09_events_upcoming_30d.csv,weather_precip_in,float64,Weather precip in
+09_events_upcoming_30d.csv,data_source,str,Always 'synthetic'
+10_context_event_signals.csv,event_id,str,Event identifier (EVT-######)
+10_context_event_signals.csv,venue_id,str,Venue identifier (V01 = target venue)
+10_context_event_signals.csv,anchor_team_home_away,str,home = venue's team plays at home (full crowd); away = team plays elsewhere and venue hosts a watch party/fan fest (much smaller crowd); neutral = non-football
+10_context_event_signals.csv,home_crowd_multiplier,float64,"Crowd factor vs a home game (home 1.0, away 0.33, neutral 0.85)"
+10_context_event_signals.csv,anchor_team_win_pct_to_date,float64,Anchor team win pct to date
+10_context_event_signals.csv,standings_position,int64,Standings position
+10_context_event_signals.csv,social_interest_index,float64,Social interest index
+10_context_event_signals.csv,social_mentions_7d,int64,Social mentions 7d
+10_context_event_signals.csv,search_trend_index,float64,Search trend index
+10_context_event_signals.csv,ticket_resale_price_index,float64,Ticket resale price index
+10_context_event_signals.csv,transit_advisory,bool,Transit advisory
+10_context_event_signals.csv,road_closure_nearby,bool,Road closure nearby
+10_context_event_signals.csv,competing_events_within_10mi,int64,Competing events within 10mi
+10_context_event_signals.csv,days_since_last_venue_event,int64,Days since last venue event
+10_context_event_signals.csv,local_school_holiday,bool,Local school holiday
+10_context_event_signals.csv,signal_timestamp,str,Signal timestamp
+10_context_event_signals.csv,signal_confidence,float64,Signal confidence
+10_context_event_signals.csv,data_source,str,Always 'synthetic'
+11_similar_events_top12.csv,event_id,str,Event identifier (EVT-######)
+11_similar_events_top12.csv,venue_id,str,Venue identifier (V01 = target venue)
+11_similar_events_top12.csv,event_category,str,Event category
+11_similar_events_top12.csv,home_away,str,Home away
+11_similar_events_top12.csv,similarity_rank,int64,Similarity rank
+11_similar_events_top12.csv,similar_event_id,str,Similar event id
+11_similar_events_top12.csv,similar_venue_id,str,Similar venue id
+11_similar_events_top12.csv,similar_event_start,str,Similar event start
+11_similar_events_top12.csv,similar_home_away,str,Similar home away
+11_similar_events_top12.csv,similar_actual_attendance,int64,Similar actual attendance
+11_similar_events_top12.csv,similarity_score,float64,Overall event similarity (0–1)
+11_similar_events_top12.csv,venue_similarity,float64,Venue similarity
+11_similar_events_top12.csv,home_away_match,int64,Home away match
+11_similar_events_top12.csv,attendance_similarity,float64,Attendance similarity
+12_network_kpi_event_hourly.csv,event_id,str,Event identifier (EVT-######)
+12_network_kpi_event_hourly.csv,venue_id,str,Venue identifier (V01 = target venue)
+12_network_kpi_event_hourly.csv,cell_id,str,Cell/sector identifier
+12_network_kpi_event_hourly.csv,hour_start,str,Hour start
+12_network_kpi_event_hourly.csv,hours_from_start,float64,Hours from start
+12_network_kpi_event_hourly.csv,event_phase,str,Event phase
+12_network_kpi_event_hourly.csv,avg_ul_prb_pct,float64,Avg ul prb pct
+12_network_kpi_event_hourly.csv,peak_ul_prb_pct,float64,Peak ul prb pct
+12_network_kpi_event_hourly.csv,avg_dl_prb_pct,float64,Avg dl prb pct
+12_network_kpi_event_hourly.csv,avg_rrc_connected,float64,Avg rrc connected
+12_network_kpi_event_hourly.csv,avg_active_ues,float64,Avg active ues
+12_network_kpi_event_hourly.csv,ul_volume_gb,float64,Ul volume gb
+12_network_kpi_event_hourly.csv,dl_volume_gb,float64,Dl volume gb
+12_network_kpi_event_hourly.csv,ul_tput_p50_mbps,float64,Median uplink user throughput (Mbps)
+12_network_kpi_event_hourly.csv,ul_tput_p10_mbps,float64,10th-percentile uplink user throughput (Mbps)
+12_network_kpi_event_hourly.csv,dl_tput_p50_mbps,float64,Median downlink throughput (Mbps)
+12_network_kpi_event_hourly.csv,dl_tput_p10_mbps,float64,10th-percentile downlink throughput (Mbps)
+12_network_kpi_event_hourly.csv,avg_cqi,float64,Avg cqi
+12_network_kpi_event_hourly.csv,avg_sinr_db,float64,Avg sinr db
+12_network_kpi_event_hourly.csv,avg_power_headroom_db,float64,Avg power headroom db
+12_network_kpi_event_hourly.csv,handover_attempts,int64,Handover attempts in interval
+12_network_kpi_event_hourly.csv,handover_success_pct,float64,Handover success rate (%)
+12_network_kpi_event_hourly.csv,rach_attempts,int64,Random-access attempts
+12_network_kpi_event_hourly.csv,rach_failures,int64,Random-access failures
+12_network_kpi_event_hourly.csv,congestion_minutes,float64,Congestion minutes
+13_network_kpi_cell_daily.csv,date,str,Date
+13_network_kpi_cell_daily.csv,venue_id,str,Venue identifier (V01 = target venue)
+13_network_kpi_cell_daily.csv,cell_id,str,Cell/sector identifier
+13_network_kpi_cell_daily.csv,is_event_day,bool,Is event day
+13_network_kpi_cell_daily.csv,avg_ul_prb_pct,float64,Avg ul prb pct
+13_network_kpi_cell_daily.csv,peak_ul_prb_pct,float64,Peak ul prb pct
+13_network_kpi_cell_daily.csv,avg_dl_prb_pct,float64,Avg dl prb pct
+13_network_kpi_cell_daily.csv,daily_ul_gb,float64,Daily ul gb
+13_network_kpi_cell_daily.csv,daily_dl_gb,float64,Daily dl gb
+13_network_kpi_cell_daily.csv,avg_connected_users,float64,Avg connected users
+13_network_kpi_cell_daily.csv,ul_tput_p10_mbps,float64,10th-percentile uplink user throughput (Mbps)
+13_network_kpi_cell_daily.csv,congestion_minutes,float64,Congestion minutes
+13_network_kpi_cell_daily.csv,cell_availability_pct,float64,Cell availability pct
+14_network_telemetry_15s_target_venue_12m.csv,timestamp,str,Timestamp
+14_network_telemetry_15s_target_venue_12m.csv,event_id,str,Event identifier (EVT-######)
+14_network_telemetry_15s_target_venue_12m.csv,venue_id,str,Venue identifier (V01 = target venue)
+14_network_telemetry_15s_target_venue_12m.csv,cell_id,str,Cell/sector identifier
+14_network_telemetry_15s_target_venue_12m.csv,seconds_from_start,int64,Seconds from start
+14_network_telemetry_15s_target_venue_12m.csv,event_phase,str,Event phase
+14_network_telemetry_15s_target_venue_12m.csv,ul_prb_pct,float64,Uplink PRB utilisation (%)
+14_network_telemetry_15s_target_venue_12m.csv,dl_prb_pct,float64,Downlink PRB utilisation (%)
+14_network_telemetry_15s_target_venue_12m.csv,rrc_connected,int64,RRC-connected users
+14_network_telemetry_15s_target_venue_12m.csv,active_ues,int64,Active UEs with data in interval
+14_network_telemetry_15s_target_venue_12m.csv,ul_bytes_mb,float64,Ul bytes mb
+14_network_telemetry_15s_target_venue_12m.csv,dl_bytes_mb,float64,Dl bytes mb
+14_network_telemetry_15s_target_venue_12m.csv,ul_tput_p50_mbps,float64,Median uplink user throughput (Mbps)
+14_network_telemetry_15s_target_venue_12m.csv,ul_tput_p10_mbps,float64,10th-percentile uplink user throughput (Mbps)
+14_network_telemetry_15s_target_venue_12m.csv,dl_tput_p50_mbps,float64,Median downlink throughput (Mbps)
+14_network_telemetry_15s_target_venue_12m.csv,dl_tput_p10_mbps,float64,10th-percentile downlink throughput (Mbps)
+14_network_telemetry_15s_target_venue_12m.csv,cqi,float64,Average channel quality indicator (1–15)
+14_network_telemetry_15s_target_venue_12m.csv,sinr_db,float64,Average SINR (dB)
+14_network_telemetry_15s_target_venue_12m.csv,power_headroom_db,float64,Average UE power headroom (dB)
+14_network_telemetry_15s_target_venue_12m.csv,handover_attempts,int64,Handover attempts in interval
+14_network_telemetry_15s_target_venue_12m.csv,handover_success_pct,float64,Handover success rate (%)
+14_network_telemetry_15s_target_venue_12m.csv,rach_attempts,int64,Random-access attempts
+14_network_telemetry_15s_target_venue_12m.csv,rach_failures,int64,Random-access failures
+14_network_telemetry_15s_target_venue_12m.csv,congestion_flag,bool,>85% UL PRB and <3 Mbps UL p10 for 3 consecutive 15-s intervals (placeholder rule)
+14_network_telemetry_15s_target_venue_12m.csv,label_congestion_next_60s,bool,Target: congestion occurs within the next 60 s
+14_network_telemetry_15s_target_venue_12m.csv,label_congestion_next_120s,bool,Target: congestion within next 120 s
+14_network_telemetry_15s_target_venue_12m.csv,label_congestion_next_180s,bool,Target: congestion within next 180 s
+14_network_telemetry_15s_target_venue_12m.csv,true_occupancy_sim_only,int64,Simulator ground-truth people in cell area — DO NOT use as a model feature
+14_network_telemetry_15s_target_venue_12m.csv,threshold_version,str,Congestion rule version used
+14_network_telemetry_15s_target_venue_12m.csv,data_source,str,Always 'synthetic'
+15_live_signals_15s_current_event.csv,timestamp,str,Timestamp
+15_live_signals_15s_current_event.csv,event_id,str,Event identifier (EVT-######)
+15_live_signals_15s_current_event.csv,venue_id,str,Venue identifier (V01 = target venue)
+15_live_signals_15s_current_event.csv,cell_id,str,Cell/sector identifier
+15_live_signals_15s_current_event.csv,seconds_from_start,int64,Seconds from start
+15_live_signals_15s_current_event.csv,event_phase,str,Event phase
+15_live_signals_15s_current_event.csv,ul_prb_pct,float64,Uplink PRB utilisation (%)
+15_live_signals_15s_current_event.csv,dl_prb_pct,float64,Downlink PRB utilisation (%)
+15_live_signals_15s_current_event.csv,rrc_connected,int64,RRC-connected users
+15_live_signals_15s_current_event.csv,active_ues,int64,Active UEs with data in interval
+15_live_signals_15s_current_event.csv,ul_bytes_mb,float64,Ul bytes mb
+15_live_signals_15s_current_event.csv,dl_bytes_mb,float64,Dl bytes mb
+15_live_signals_15s_current_event.csv,ul_tput_p50_mbps,float64,Median uplink user throughput (Mbps)
+15_live_signals_15s_current_event.csv,ul_tput_p10_mbps,float64,10th-percentile uplink user throughput (Mbps)
+15_live_signals_15s_current_event.csv,dl_tput_p50_mbps,float64,Median downlink throughput (Mbps)
+15_live_signals_15s_current_event.csv,dl_tput_p10_mbps,float64,10th-percentile downlink throughput (Mbps)
+15_live_signals_15s_current_event.csv,cqi,float64,Average channel quality indicator (1–15)
+15_live_signals_15s_current_event.csv,sinr_db,float64,Average SINR (dB)
+15_live_signals_15s_current_event.csv,power_headroom_db,float64,Average UE power headroom (dB)
+15_live_signals_15s_current_event.csv,handover_attempts,int64,Handover attempts in interval
+15_live_signals_15s_current_event.csv,handover_success_pct,float64,Handover success rate (%)
+15_live_signals_15s_current_event.csv,rach_attempts,int64,Random-access attempts
+15_live_signals_15s_current_event.csv,rach_failures,int64,Random-access failures
+15_live_signals_15s_current_event.csv,congestion_flag,bool,>85% UL PRB and <3 Mbps UL p10 for 3 consecutive 15-s intervals (placeholder rule)
+15_live_signals_15s_current_event.csv,true_occupancy_sim_only,int64,Simulator ground-truth people in cell area — DO NOT use as a model feature
+15_live_signals_15s_current_event.csv,threshold_version,str,Congestion rule version used
+15_live_signals_15s_current_event.csv,data_source,str,Always 'synthetic'
+15_live_signals_15s_current_event.csv,forecast_ul_prb_pct,float64,Forecast ul prb pct
+15_live_signals_15s_current_event.csv,forecast_rrc_connected,int64,Forecast rrc connected
+15_live_signals_15s_current_event.csv,residual_ul_prb,float64,Residual ul prb
+15_live_signals_15s_current_event.csv,pred_congestion_risk_60s,float64,Pred congestion risk 60s
+15_live_signals_15s_current_event.csv,pred_congestion_risk_180s,float64,Pred congestion risk 180s
+15_live_signals_15s_current_event.csv,model_version,str,Forecast model version
+15_live_signals_15s_current_event.csv,is_live,bool,Is live
+16_live_model_monitoring_1min.csv,timestamp,str,Timestamp
+16_live_model_monitoring_1min.csv,event_id,str,Event identifier (EVT-######)
+16_live_model_monitoring_1min.csv,cell_id,str,Cell/sector identifier
+16_live_model_monitoring_1min.csv,mae_5min_ul_prb,float64,Mae 5min ul prb
+16_live_model_monitoring_1min.csv,bias_5min_ul_prb,float64,Bias 5min ul prb
+16_live_model_monitoring_1min.csv,rmse_15min_ul_prb,float64,Rmse 15min ul prb
+16_live_model_monitoring_1min.csv,drift_score,float64,|5-min bias| / 60-min residual std
+16_live_model_monitoring_1min.csv,drift_alert,bool,Drift alert
+17_forecasts_vs_actuals_history.csv,event_id,str,Event identifier (EVT-######)
+17_forecasts_vs_actuals_history.csv,venue_id,str,Venue identifier (V01 = target venue)
+17_forecasts_vs_actuals_history.csv,cell_id,str,Cell/sector identifier
+17_forecasts_vs_actuals_history.csv,forecast_issued_at,str,Forecast issued at
+17_forecasts_vs_actuals_history.csv,model_version,str,Forecast model version
+17_forecasts_vs_actuals_history.csv,forecast_attendance,int64,Forecast attendance
+17_forecasts_vs_actuals_history.csv,actual_attendance,int64,Measured attendance (people); blank if not completed
+17_forecasts_vs_actuals_history.csv,forecast_peak_ul_prb_pct,float64,Forecast peak ul prb pct
+17_forecasts_vs_actuals_history.csv,forecast_interval_low,float64,Forecast interval low
+17_forecasts_vs_actuals_history.csv,forecast_interval_high,float64,Forecast interval high
+17_forecasts_vs_actuals_history.csv,actual_peak_ul_prb_pct,float64,Actual peak ul prb pct
+17_forecasts_vs_actuals_history.csv,forecast_peak_users,int64,Forecast peak users
+17_forecasts_vs_actuals_history.csv,actual_peak_users,int64,Actual peak users
+17_forecasts_vs_actuals_history.csv,forecast_risk_level,str,Forecast risk level
+17_forecasts_vs_actuals_history.csv,actual_congestion_occurred,bool,Actual congestion occurred
+17_forecasts_vs_actuals_history.csv,actual_congestion_minutes,float64,Actual congestion minutes
+17_forecasts_vs_actuals_history.csv,abs_pct_error_peak_prb,float64,Abs pct error peak prb
+17_forecasts_vs_actuals_history.csv,abs_pct_error_attendance,float64,Abs pct error attendance
+17_forecasts_vs_actuals_history.csv,within_interval,bool,Within interval
+18_model_monitoring_daily.csv,date,str,Date
+18_model_monitoring_daily.csv,model_version,str,Forecast model version
+18_model_monitoring_daily.csv,events_scored,int64,Events scored
+18_model_monitoring_daily.csv,rolling_30d_mape_pct,float64,Rolling 30d mape pct
+18_model_monitoring_daily.csv,rolling_30d_bias_prb,float64,Rolling 30d bias prb
+18_model_monitoring_daily.csv,rolling_30d_interval_coverage,float64,Rolling 30d interval coverage
+18_model_monitoring_daily.csv,psi_attendance,float64,Population stability index of attendance feature
+18_model_monitoring_daily.csv,psi_ul_prb,float64,Population stability index of UL PRB
+18_model_monitoring_daily.csv,drift_flag,bool,Drift flag
+18_model_monitoring_daily.csv,drift_note,str,Drift note
+19_forecasts_upcoming_hourly.csv,event_id,str,Event identifier (EVT-######)
+19_forecasts_upcoming_hourly.csv,venue_id,str,Venue identifier (V01 = target venue)
+19_forecasts_upcoming_hourly.csv,cell_id,str,Cell/sector identifier
+19_forecasts_upcoming_hourly.csv,hour_start,str,Hour start
+19_forecasts_upcoming_hourly.csv,event_phase,str,Event phase
+19_forecasts_upcoming_hourly.csv,forecast_peak_ul_prb_pct,float64,Forecast peak ul prb pct
+19_forecasts_upcoming_hourly.csv,forecast_interval_low,float64,Forecast interval low
+19_forecasts_upcoming_hourly.csv,forecast_interval_high,float64,Forecast interval high
+19_forecasts_upcoming_hourly.csv,forecast_connected_users,float64,Forecast connected users
+19_forecasts_upcoming_hourly.csv,risk_60s,float64,Risk 60s
+19_forecasts_upcoming_hourly.csv,risk_120s,float64,Risk 120s
+19_forecasts_upcoming_hourly.csv,risk_180s,float64,Risk 180s
+19_forecasts_upcoming_hourly.csv,model_version,str,Forecast model version
+19_forecasts_upcoming_hourly.csv,forecast_issued_at,str,Forecast issued at
+20_decisions_log.csv,decision_id,str,Decision id
+20_decisions_log.csv,event_id,str,Event identifier (EVT-######)
+20_decisions_log.csv,venue_id,str,Venue identifier (V01 = target venue)
+20_decisions_log.csv,cell_id,str,Cell/sector identifier
+20_decisions_log.csv,decision_time,str,Decision time
+20_decisions_log.csv,forecast_risk_level,str,Forecast risk level
+20_decisions_log.csv,forecast_peak_ul_prb_pct,float64,Forecast peak ul prb pct
+20_decisions_log.csv,recommendation,str,Recommendation
+20_decisions_log.csv,target_neighbor_cell_id,str,Target neighbor cell id
+20_decisions_log.csv,neighbor_headroom_pct,float64,Neighbor headroom pct
+20_decisions_log.csv,operator_approved,bool,Operator approved
+20_decisions_log.csv,approver_role,str,Approver role
+20_decisions_log.csv,simulated_ul_prb_after_pct,float64,Simulated ul prb after pct
+20_decisions_log.csv,simulated_ul_p10_after_mbps,float64,Simulated ul p10 after mbps
+20_decisions_log.csv,verify_result,str,Verify result
+20_decisions_log.csv,fallback_triggered,bool,Fallback triggered
+20_decisions_log.csv,escalated_to,str,Escalated to
+20_decisions_log.csv,audit_status,str,Audit status
+21_thresholds_policy.csv,threshold_version,str,Congestion rule version used
+21_thresholds_policy.csv,effective_from,str,Effective from
+21_thresholds_policy.csv,effective_to,float64,Effective to
+21_thresholds_policy.csv,ul_prb_pct_gt,int64,Ul prb pct gt
+21_thresholds_policy.csv,ul_p10_mbps_lt,float64,Ul p10 mbps lt
+21_thresholds_policy.csv,consecutive_15s_intervals,int64,Consecutive 15s intervals
+21_thresholds_policy.csv,label_horizons_s,str,Label horizons s
+21_thresholds_policy.csv,approval_status,str,Approval status
+22_backhaul_links.csv,link_id,str,"Backhaul link id (<site>-BH site link, <venue>-AGG venue aggregation link)"
+22_backhaul_links.csv,link_level,str,site = cell site to aggregation router; aggregation = venue router to core
+22_backhaul_links.csv,venue_id,str,Venue identifier (V01 = target venue)
+22_backhaul_links.csv,site_id,str,Cell site id (blank for aggregation links)
+22_backhaul_links.csv,uplink_to,str,Next hop the link connects to
+22_backhaul_links.csv,medium,str,fiber or microwave
+22_backhaul_links.csv,redundancy,str,Protection scheme
+22_backhaul_links.csv,baseline_latency_ms,float64,Unloaded latency (ms)
+22_backhaul_links.csv,data_source,str,Always 'synthetic'
+23_backhaul_capacity_history.csv,link_id,str,"Backhaul link id (<site>-BH site link, <venue>-AGG venue aggregation link)"
+23_backhaul_capacity_history.csv,effective_from,str,Date the capacity took effect
+23_backhaul_capacity_history.csv,capacity_gbps,int64,Link capacity (Gbps)
+23_backhaul_capacity_history.csv,change_reason,str,baseline or upgrade
+24_backhaul_utilization_event_hourly.csv,link_id,str,"Backhaul link id (<site>-BH site link, <venue>-AGG venue aggregation link)"
+24_backhaul_utilization_event_hourly.csv,link_level,str,site = cell site to aggregation router; aggregation = venue router to core
+24_backhaul_utilization_event_hourly.csv,venue_id,str,Venue identifier (V01 = target venue)
+24_backhaul_utilization_event_hourly.csv,site_id,str,Cell site id (blank for aggregation links)
+24_backhaul_utilization_event_hourly.csv,event_id,str,Event identifier (EVT-######)
+24_backhaul_utilization_event_hourly.csv,hour_start,str,Hour start
+24_backhaul_utilization_event_hourly.csv,event_phase,str,Event phase
+24_backhaul_utilization_event_hourly.csv,venue_ul_gbps,float64,Uplink from venue cells on this link (Gbps)
+24_backhaul_utilization_event_hourly.csv,venue_dl_gbps,float64,Downlink from venue cells on this link (Gbps)
+24_backhaul_utilization_event_hourly.csv,background_gbps,float64,Non-venue traffic sharing the link (Gbps)
+24_backhaul_utilization_event_hourly.csv,total_gbps,float64,Total traffic on the link (Gbps)
+24_backhaul_utilization_event_hourly.csv,capacity_gbps,int64,Link capacity (Gbps)
+24_backhaul_utilization_event_hourly.csv,utilization_pct,float64,Average link utilisation (%)
+24_backhaul_utilization_event_hourly.csv,peak_15min_utilization_pct,float64,Busiest 15-minute utilisation in the hour (%)
+24_backhaul_utilization_event_hourly.csv,headroom_gbps,float64,Spare capacity at average load (Gbps)
+24_backhaul_utilization_event_hourly.csv,peak_headroom_gbps,float64,Spare capacity at busiest 15 minutes (Gbps)
+24_backhaul_utilization_event_hourly.csv,latency_ms,float64,Measured latency (ms)
+24_backhaul_utilization_event_hourly.csv,packet_loss_pct,float64,Packet loss (%)
+24_backhaul_utilization_event_hourly.csv,congested_flag,bool,True when link is at or above 90% utilisation
+24_backhaul_utilization_event_hourly.csv,data_source,str,Always 'synthetic'
+25_backhaul_utilization_15s_target_venue.csv,timestamp,str,Timestamp
+25_backhaul_utilization_15s_target_venue.csv,link_id,str,"Backhaul link id (<site>-BH site link, <venue>-AGG venue aggregation link)"
+25_backhaul_utilization_15s_target_venue.csv,link_level,str,site = cell site to aggregation router; aggregation = venue router to core
+25_backhaul_utilization_15s_target_venue.csv,site_id,str,Cell site id (blank for aggregation links)
+25_backhaul_utilization_15s_target_venue.csv,event_id,str,Event identifier (EVT-######)
+25_backhaul_utilization_15s_target_venue.csv,event_phase,str,Event phase
+25_backhaul_utilization_15s_target_venue.csv,is_live,bool,True for rows from the live event
+25_backhaul_utilization_15s_target_venue.csv,venue_ul_gbps,float64,Uplink from venue cells on this link (Gbps)
+25_backhaul_utilization_15s_target_venue.csv,venue_dl_gbps,float64,Downlink from venue cells on this link (Gbps)
+25_backhaul_utilization_15s_target_venue.csv,background_gbps,float64,Non-venue traffic sharing the link (Gbps)
+25_backhaul_utilization_15s_target_venue.csv,total_gbps,float64,Total traffic on the link (Gbps)
+25_backhaul_utilization_15s_target_venue.csv,capacity_gbps,int64,Link capacity (Gbps)
+25_backhaul_utilization_15s_target_venue.csv,utilization_pct,float64,Average link utilisation (%)
+25_backhaul_utilization_15s_target_venue.csv,headroom_gbps,float64,Spare capacity at average load (Gbps)
+25_backhaul_utilization_15s_target_venue.csv,latency_ms,float64,Measured latency (ms)
+25_backhaul_utilization_15s_target_venue.csv,packet_loss_pct,float64,Packet loss (%)
+25_backhaul_utilization_15s_target_venue.csv,congested_flag,bool,True when link is at or above 90% utilisation
+25_backhaul_utilization_15s_target_venue.csv,data_source,str,Always 'synthetic'
+26_steering_safety_checks.csv,decision_id,str,Decision id
+26_steering_safety_checks.csv,event_id,str,Event identifier (EVT-######)
+26_steering_safety_checks.csv,venue_id,str,Venue identifier (V01 = target venue)
+26_steering_safety_checks.csv,source_cell_id,str,Congested cell traffic would move from
+26_steering_safety_checks.csv,target_cell_id,str,Neighbour cell receiving users (blank for fallback actions)
+26_steering_safety_checks.csv,source_site_id,str,Site of the source cell
+26_steering_safety_checks.csv,target_site_id,str,Site of the target cell
+26_steering_safety_checks.csv,same_site_backhaul,bool,True if source and target share one backhaul link
+26_steering_safety_checks.csv,check_hour,str,Event hour checked (forecast peak)
+26_steering_safety_checks.csv,target_radio_headroom_pct,float64,Radio headroom on target cell (%)
+26_steering_safety_checks.csv,radio_ok,bool,True if target radio headroom >= 15%
+26_steering_safety_checks.csv,traffic_to_move_gbps,float64,Traffic shifted to target if steered (Gbps)
+26_steering_safety_checks.csv,target_site_backhaul_peak_util_pct,float64,Target site backhaul peak utilisation before move (%)
+26_steering_safety_checks.csv,target_site_backhaul_peak_headroom_gbps,float64,Target site backhaul peak headroom before move (Gbps)
+26_steering_safety_checks.csv,target_site_util_after_move_pct,float64,Projected target site backhaul utilisation after move (%)
+26_steering_safety_checks.csv,aggregation_peak_util_pct,float64,Venue aggregation link peak utilisation (%)
+26_steering_safety_checks.csv,backhaul_ok,bool,True if target link stays <=85% after move and aggregation <=90%
+26_steering_safety_checks.csv,steer_safe,bool,True only if radio_ok and backhaul_ok
+26_steering_safety_checks.csv,approval_tier,str,Approval tier: tier 1 automatic / tier 2 engineer approves / tier 3 fallback / tier 0 monitor only
+26_steering_safety_checks.csv,check_reason,str,Plain-language result of the backhaul-aware check
+26_steering_safety_checks.csv,original_recommendation,str,Recommendation in 20_decisions_log.csv
+26_steering_safety_checks.csv,data_source,str,Always 'synthetic'
+27_network_accessibility_drops_event_hourly.csv,event_id,str,Event identifier (EVT-######)
+27_network_accessibility_drops_event_hourly.csv,venue_id,str,Venue identifier (V01 = target venue)
+27_network_accessibility_drops_event_hourly.csv,cell_id,str,Cell/sector identifier
+27_network_accessibility_drops_event_hourly.csv,hour_start,str,Hour start
+27_network_accessibility_drops_event_hourly.csv,event_phase,str,Event phase
+27_network_accessibility_drops_event_hourly.csv,rrc_setup_attempts,int64,Connection (RRC) setup attempts in the hour
+27_network_accessibility_drops_event_hourly.csv,rrc_setup_success_pct,float64,Share of connection setups that succeeded (%)
+27_network_accessibility_drops_event_hourly.csv,erab_setup_success_pct,float64,Share of data bearer (E-RAB) setups that succeeded (%)
+27_network_accessibility_drops_event_hourly.csv,accessibility_pct,float64,Accessibility = RRC success x E-RAB success (%)
+27_network_accessibility_drops_event_hourly.csv,sessions_established,int64,Data sessions successfully set up
+27_network_accessibility_drops_event_hourly.csv,abnormal_session_releases,int64,Sessions dropped abnormally
+27_network_accessibility_drops_event_hourly.csv,session_drop_rate_pct,float64,Dropped sessions / sessions established (%)
+27_network_accessibility_drops_event_hourly.csv,volte_call_attempts,int64,Voice-over-LTE call attempts
+27_network_accessibility_drops_event_hourly.csv,volte_drop_rate_pct,float64,Voice-over-LTE call drop rate (%)
+27_network_accessibility_drops_event_hourly.csv,ul_packet_loss_pct,float64,Uplink packet loss on the radio (%)
+27_network_accessibility_drops_event_hourly.csv,data_source,str,Always 'synthetic'
+28_temporary_capacity_deployments.csv,event_id,str,Event identifier (EVT-######)
+28_temporary_capacity_deployments.csv,venue_id,str,Venue identifier (V01 = target venue)
+28_temporary_capacity_deployments.csv,event_start,str,Event start (local time)
+28_temporary_capacity_deployments.csv,event_category,str,Event category
+28_temporary_capacity_deployments.csv,expected_attendance,int64,Pre-event attendance estimate (people)
+28_temporary_capacity_deployments.csv,deployed_by_current_rule,bool,"True if today's rule of thumb (attendance >75% of seats, playoffs, festivals) brought in temporary capacity"
+28_temporary_capacity_deployments.csv,cow_units,int64,Cells-on-wheels deployed
+28_temporary_capacity_deployments.csv,temp_small_cells,int64,Temporary small cells deployed
+28_temporary_capacity_deployments.csv,ul_capacity_added_mbps,float64,Uplink capacity added by temporary equipment (Mbps)
+28_temporary_capacity_deployments.csv,deployment_cost_usd,float64,Cost of temporary capacity for the event (USD)
+28_temporary_capacity_deployments.csv,setup_crew_hours,float64,Crew hours to install and remove temporary capacity
+28_temporary_capacity_deployments.csv,needed_per_actuals,bool,"True if the event had >45 congestion minutes, i.e. extra capacity was really needed"
+28_temporary_capacity_deployments.csv,historical_outcome,str,Rule decision vs actual need
+28_temporary_capacity_deployments.csv,poc_forecast_available,bool,True if the PoC model had a forecast for this event
+28_temporary_capacity_deployments.csv,poc_would_deploy,float64,True if the PoC forecast high risk and would have recommended temporary capacity
+28_temporary_capacity_deployments.csv,poc_avoidable_cost_usd,float64,"Cost that could have been avoided: deployed by rule, not needed, PoC would not deploy"
+28_temporary_capacity_deployments.csv,data_source,str,Always 'synthetic'
+29_engineer_effort_log.csv,decision_id,str,Decision id
+29_engineer_effort_log.csv,event_id,str,Event identifier (EVT-######)
+29_engineer_effort_log.csv,venue_id,str,Venue identifier (V01 = target venue)
+29_engineer_effort_log.csv,cell_id,str,Cell/sector identifier
+29_engineer_effort_log.csv,recommendation,str,Recommendation from 20_decisions_log.csv
+29_engineer_effort_log.csv,approval_tier,str,Approval tier: tier 1 automatic / tier 2 engineer approves / tier 3 fallback / tier 0 monitor only
+29_engineer_effort_log.csv,manual_detect_min,float64,Manual process: minutes to spot the issue on dashboards
+29_engineer_effort_log.csv,manual_analysis_min,float64,Manual process: minutes to diagnose and pick a fix
+29_engineer_effort_log.csv,manual_change_min,float64,Manual process: minutes to make the change
+29_engineer_effort_log.csv,manual_verify_min,float64,Manual process: minutes to verify the change
+29_engineer_effort_log.csv,manual_total_min,float64,"Total engineer minutes, manual process"
+29_engineer_effort_log.csv,poc_engineer_review_min,float64,Engineer minutes with the PoC (review/approve only)
+29_engineer_effort_log.csv,engineer_minutes_saved,float64,manual_total_min minus poc_engineer_review_min
+29_engineer_effort_log.csv,manual_detection_lag_s,float64,Seconds after congestion starts that a person typically notices it
+29_engineer_effort_log.csv,poc_detection_lead_s,float64,Seconds before congestion that the PoC raises a warning
+29_engineer_effort_log.csv,data_source,str,Always 'synthetic'
+30_unplanned_gatherings.csv,gathering_id,str,Unplanned gathering identifier
+30_unplanned_gatherings.csv,venue_id,str,Venue identifier (V01 = target venue)
+30_unplanned_gatherings.csv,gathering_type,str,Kind of unplanned crowd
+30_unplanned_gatherings.csv,start_time,str,Gathering start (local time)
+30_unplanned_gatherings.csv,duration_hours,float64,Gathering duration (hours)
+30_unplanned_gatherings.csv,peak_crowd_est,int64,Estimated peak crowd size
+30_unplanned_gatherings.csv,location_zone,str,Where around the venue the crowd formed
+30_unplanned_gatherings.csv,on_public_schedule,bool,Always False: not in any event listing
+30_unplanned_gatherings.csv,social_spike_detected,bool,True if a social-media spike flagged the crowd beforehand
+30_unplanned_gatherings.csv,social_lead_minutes,float64,Minutes of warning from the social spike (blank if none)
+30_unplanned_gatherings.csv,network_model_lead_s,float64,Seconds of warning from live network signals alone
+30_unplanned_gatherings.csv,ul_surge_vs_baseline_pct,float64,Uplink traffic rise vs normal for that time (%)
+30_unplanned_gatherings.csv,peak_ul_prb_pct,float64,Peak uplink resource use (%)
+30_unplanned_gatherings.csv,congestion_occurred,bool,True if congestion occurred
+30_unplanned_gatherings.csv,poc_action,str,What the PoC would recommend
+30_unplanned_gatherings.csv,data_source,str,Always 'synthetic'
+31_unplanned_gathering_telemetry_15s_V01.csv,timestamp,str,Timestamp
+31_unplanned_gathering_telemetry_15s_V01.csv,gathering_id,str,Unplanned gathering identifier
+31_unplanned_gathering_telemetry_15s_V01.csv,venue_id,str,Venue identifier (V01 = target venue)
+31_unplanned_gathering_telemetry_15s_V01.csv,cell_id,str,Cell/sector identifier
+31_unplanned_gathering_telemetry_15s_V01.csv,seconds_from_start,int64,Seconds from gathering start (negative = before)
+31_unplanned_gathering_telemetry_15s_V01.csv,ul_prb_pct,float64,Uplink PRB utilisation (%)
+31_unplanned_gathering_telemetry_15s_V01.csv,ul_tput_p10_mbps,float64,Worst-served 10% uplink speed (Mbps)
+31_unplanned_gathering_telemetry_15s_V01.csv,rrc_connected,int64,Connected users
+31_unplanned_gathering_telemetry_15s_V01.csv,congestion_flag,bool,>85% uplink use and <3 Mbps P10
+31_unplanned_gathering_telemetry_15s_V01.csv,data_source,str,Always 'synthetic'
+32_traffic_mix_by_app_event_hourly.csv,event_id,str,Event identifier (EVT-######)
+32_traffic_mix_by_app_event_hourly.csv,venue_id,str,Venue identifier (V01 = target venue)
+32_traffic_mix_by_app_event_hourly.csv,hour_start,str,Hour start
+32_traffic_mix_by_app_event_hourly.csv,event_phase,str,Event phase
+32_traffic_mix_by_app_event_hourly.csv,app_category,str,Application group
+32_traffic_mix_by_app_event_hourly.csv,ul_gb,float64,Uplink volume for this app (GB)
+32_traffic_mix_by_app_event_hourly.csv,dl_gb,float64,Downlink volume for this app (GB)
+32_traffic_mix_by_app_event_hourly.csv,ul_share_pct,float64,App's share of uplink (%)
+32_traffic_mix_by_app_event_hourly.csv,dl_share_pct,float64,App's share of downlink (%)
+32_traffic_mix_by_app_event_hourly.csv,venue_dl_to_ul_ratio,float64,Venue downlink-to-uplink volume ratio for the hour
+32_traffic_mix_by_app_event_hourly.csv,data_source,str,Always 'synthetic'
+33_device_mix_event.csv,event_id,str,Event identifier (EVT-######)
+33_device_mix_event.csv,venue_id,str,Venue identifier (V01 = target venue)
+33_device_mix_event.csv,event_start,str,Event start (local time)
+33_device_mix_event.csv,connected_devices_est,int64,Estimated devices connected during the event
+33_device_mix_event.csv,share_5g_sa_pct,float64,Share of 5G standalone devices (%)
+33_device_mix_event.csv,share_5g_nsa_pct,float64,Share of 5G non-standalone devices (%)
+33_device_mix_event.csv,share_lte_only_pct,float64,Share of LTE-only devices (%)
+33_device_mix_event.csv,share_wearables_iot_pct,float64,Share of wearables and IoT devices (%)
+33_device_mix_event.csv,ul_mimo_capable_pct,float64,Share of devices supporting uplink MIMO (%)
+33_device_mix_event.csv,ul_carrier_agg_capable_pct,float64,Share supporting uplink carrier aggregation (%)
+33_device_mix_event.csv,avg_ul_mb_per_device,float64,Average uplink per device during the event (MB)
+33_device_mix_event.csv,avg_dl_mb_per_device,float64,Average downlink per device during the event (MB)
+33_device_mix_event.csv,data_source,str,Always 'synthetic'
+34_steering_actions_detail.csv,action_id,str,Network change identifier
+34_steering_actions_detail.csv,decision_id,str,Decision id
+34_steering_actions_detail.csv,event_id,str,Event identifier (EVT-######)
+34_steering_actions_detail.csv,cell_id,str,Cell/sector identifier
+34_steering_actions_detail.csv,target_cell_id,str,Neighbour cell receiving users (blank for fallback actions)
+34_steering_actions_detail.csv,parameter,str,Network setting changed
+34_steering_actions_detail.csv,old_value,int64,Value before the change
+34_steering_actions_detail.csv,new_value,int64,Value after the change
+34_steering_actions_detail.csv,unit,str,Unit of the setting
+34_steering_actions_detail.csv,applied_at,str,When the change was applied
+34_steering_actions_detail.csv,scheduled_revert_at,str,When the change auto-reverts (30 min)
+34_steering_actions_detail.csv,reverted_at,str,When it was actually reverted
+34_steering_actions_detail.csv,revert_reason,str,Why it was reverted
+34_steering_actions_detail.csv,change_ticket_id,str,Change ticket for traceability
+34_steering_actions_detail.csv,executed_by,str,Who or what executed the change
+34_steering_actions_detail.csv,approval_tier,str,Approval tier: tier 1 automatic / tier 2 engineer approves / tier 3 fallback / tier 0 monitor only
+34_steering_actions_detail.csv,data_source,str,Always 'synthetic'
+35_counterfactual_simulation.csv,decision_id,str,Decision id
+35_counterfactual_simulation.csv,event_id,str,Event identifier (EVT-######)
+35_counterfactual_simulation.csv,venue_id,str,Venue identifier (V01 = target venue)
+35_counterfactual_simulation.csv,cell_id,str,Cell/sector identifier
+35_counterfactual_simulation.csv,recommendation,str,Recommendation from 20_decisions_log.csv
+35_counterfactual_simulation.csv,sim_hour,str,Hour simulated (cell's peak hour)
+35_counterfactual_simulation.csv,users_in_cell,int64,Connected users in the cell in that hour
+35_counterfactual_simulation.csv,no_action_peak_ul_prb_pct,float64,Peak uplink use if nothing is done (%)
+35_counterfactual_simulation.csv,with_action_peak_ul_prb_pct,float64,Peak uplink use with the recommended action (%)
+35_counterfactual_simulation.csv,no_action_ul_p10_mbps,float64,"Worst-served 10% uplink speed, no action (Mbps)"
+35_counterfactual_simulation.csv,with_action_ul_p10_mbps,float64,"Worst-served 10% uplink speed, with action (Mbps)"
+35_counterfactual_simulation.csv,no_action_congestion_min,float64,"Congestion minutes, no action"
+35_counterfactual_simulation.csv,with_action_congestion_min,float64,"Congestion minutes, with action"
+35_counterfactual_simulation.csv,no_action_drop_rate_pct,float64,"Session drop rate, no action (%)"
+35_counterfactual_simulation.csv,with_action_drop_rate_pct,float64,"Session drop rate, with action (%)"
+35_counterfactual_simulation.csv,no_action_accessibility_pct,float64,"Accessibility, no action (%)"
+35_counterfactual_simulation.csv,with_action_accessibility_pct,float64,"Accessibility, with action (%)"
+35_counterfactual_simulation.csv,sessions_protected_est,int64,Estimated sessions kept from dropping
+35_counterfactual_simulation.csv,simulation_basis,str,How the comparison was simulated
+35_counterfactual_simulation.csv,data_source,str,Always 'synthetic'

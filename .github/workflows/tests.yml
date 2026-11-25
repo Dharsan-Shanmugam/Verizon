@@ -1,0 +1,37 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: "3.10"
+          - os: windows-latest
+            python: "3.13"
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    env:
+      ANTHROPIC_API_KEY: ""
+      ANTHROPIC_MODEL: ""
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Require bundled data and model artifacts
+        run: python -c "from tests._util import HAS_DATA, HAS_ARTIFACTS; assert HAS_DATA, 'Bundled CSVs missing'; assert HAS_ARTIFACTS, 'Bundled models missing'"
+      - name: Run unit and local HTTP integration tests
+        run: python -m unittest discover -s tests -t . -v
